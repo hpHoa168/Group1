@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Ideas</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+</head>
+
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" class="active">
+            <h1><a href="index.html" class="logo">G<div style="margin-top: -60px;" class="footer">
+                        <p>reenwich</p>
+                    </div></a></h1>
+            <ul class="list-unstyled components mb-5">
+                <li class="active">
+                    <a href="/staff/staffIndex"><span class="fa fa-home"></span> Home</a>
+                </li>
+            </ul>
+
+            <div class="footer">
+                <p>
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script>
+                    All rights reserved by University of Greenwich
+                </p>
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <form action="" method="" class="form-search">
+                        <input type="text" placeholder="  Search..." name="txtSearch">
+                    </form>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            {{#if check}}
+
+
+            <h2>Create Your Idea</h2>
+            <form action="uploadIdea" method="POST" enctype="multipart/form-data" onsubmit="if(document.getElementById('agree').checked) { return true; } 
+		else { alert('Please read and agree to the Terms and Conditions'); return false; }">
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content p-4 text-justify">
+                            <!-- Modal Header -->
+                            <center>
+                                <h4 class="modal-title">Terms and Conditions</h4>
+                            </center>
+                            <br>
+                            <!-- Modal body -->
+                            <div>
+                                THE FOLLOWING DESCRIBES THE TERMS AND CONDITIONS APPLICABLE TO YOUR USE OF THE
+                                “COMMENTS”
+                                SUBMISSION SERVICE AT THE XCONOMY WEB SITE.
+                                BY CLICKING THE “PUBLISH” BOX FOR YOUR COMMENT, YOU AGREE TO BE BOUND BY THESE TERMS AND
+                                CONDITIONS AND ABIDE BY ALL OF THE RULES AND POLICIES SET FORTH HEREIN. IF YOU DO NOT
+                                AGREE
+                                TO
+                                THESE TERMS AND CONDITIONS, DO NOT SUBMIT YOUR COMMENT TO XCONOMY WEB SITE.
+                                <br><br>
+                                1. Xconomy owns and operates the xconnomy.com site (the “Site”). Your use of the
+                                features on
+                                the
+                                Site allowing for submission of a “Comment” is subject to the following terms and
+                                conditions
+                                (the “Terms”). Xconomy may modify these Terms at any time without notice to you by
+                                posting
+                                revised Terms on the Site. Your submission of a “Comment” to the Site following the
+                                modification
+                                of these Terms shall constitute your binding acceptance of and agreement to be bound by
+                                those
+                                modified Terms.
+                                <br><br>
+                                2. You must be 18 years of age or older to submit a “Comment” to the Site. By submitting
+                                a
+                                “Comment” and accepting these Terms through your clicking of the “Publish” box, you
+                                represent
+                                that you are at least 18 years old.
+                                <br><br>
+                                3. Xconomy has the right, but not the obligation, to take any of the following actions,
+                                in
+                                Xconomy's sole unfettered discretion, at any time, and for any reason or no reason,
+                                without
+                                providing any prior notice:
+                                a. Restrict, suspend or terminate your ability to submit “Comments,” or any other
+                                content,
+                                to
+                                the Site;
+                                b. Change, suspend or modify all or any part of the Site or the features thereof;
+                                c. Refuse or remove any material posted on, submitted to or communicated through the
+                                Site by
+                                you;
+                                d. Deactivate or delete any screen names, profiles or other information associated with
+                                you;
+                                or
+                                e. Alter, modify, discontinue or remove any content of the Site.
+                                <br><br>
+                                4. You agree that, when using or accessing the Site or any of the features thereof, you
+                                will
+                                not:
+                                a. Violate any applicable law or regulation;
+                                b. Interfere with or damage the Site;
+                                c. Transmit or introduce to the Site or to other users thereof any viruses, cancel bots,
+                                Trojan
+                                horses, flood pings, denial of service attacks, or any other harmful code or processes;
+                                d. Infringe the rights of any third party, including but not limited to any intellectual
+                                property rights, privacy rights, publicity rights or contractual rights;
+                                e. Transmit or submit harmful, threatening, abusive, harassing, defamatory, deceptive,
+                                fraudulent, obscene, indecent, vulgar, lewd, violent, hateful or otherwise objectionable
+                                content
+                                or material;
+                                f. Transmit or submit any unsolicited advertising, promotional materials, or spam;
+                                g. Stalk or harass any user or visitor to the Site; or
+                                h. Use the content or information available on the Site for any improper purpose.
+                                <br><br>
+                                5. You retain the Copyright in any “Comment” you submit to Xconomy. By submitting a
+                                “Comment” to
+                                Xconomy, you agree to grant Xconomy a irrevocable, non-exclusive, royalty-free,
+                                perpetual
+                                license to use the material or commentary that you have submitted, in any medium and in
+                                any
+                                manner that Xconomy may, in its sole unfettered discretion, choose.
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="txtID" value="{{staff._id}}">
+                Title: <input type="text" name="txtTitle"><br><br>
+                Idea: <input type="text" name="txtText"><br><br>
+                Category:
+                <select name="Category">
+                    {{#each category}}
+                    <option value={{name}}>{{name}}</option>
+                    {{/each}}
+                </select>
+                <br><br>
+                Privacy:
+                <select name="privacy">
+                    <option value="public">Public name</option>
+                    <option value="anonymous">Anonymously</option>
+                </select>
+
+                <br><br>
+                {{!-- upload files --}}
+                Choose files: <br>
+                <input type="file" name="myFiles" multiple><br><br>
+
+                {{!-- check agree TaC --}}
+                <input type="checkbox" name="checkbox" value="check" id="agree" />
+                I have read and agree to the <a class="trigger_popup_fricc" href="" data-bs-toggle="modal"
+                    data-bs-target="#myModal">
+                    Terms and Conditions
+                </a>
+                <br><br>
+                <input type="submit" value="POST">
+            </form>
+            {{else}}
+            <h2>Can not post idea now!</h2>
+            {{/if}}
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
